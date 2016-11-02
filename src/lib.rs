@@ -71,12 +71,15 @@ an optimized set of tools for computer graphics and physics. Those features incl
 #![deny(non_camel_case_types)]
 #![deny(unused_parens)]
 #![deny(non_upper_case_globals)]
-#![deny(unused_qualifications)]
+// #![deny(unused_qualifications)]
 #![deny(unused_results)]
 #![warn(missing_docs)]
 #![doc(html_root_url = "http://nalgebra.org/doc")]
 
+#![feature(proc_macro)]
+
 extern crate rustc_serialize;
+#[macro_use] extern crate serde_derive;
 extern crate rand;
 extern crate num;
 
