@@ -7,7 +7,7 @@ use std::cmp::Ordering;
 use traits::structure::SquareMatrix;
 
 /// Result of a partial ordering.
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Debug, Copy)]
 pub enum PartialOrdering {
     /// Result of a strict comparison.
     PartialLess,

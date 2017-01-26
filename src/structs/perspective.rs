@@ -10,7 +10,7 @@ use quickcheck::{Arbitrary, Gen};
 /// This maps a frustrum cube to the unit cube with corners varying from `(-1, -1, -1)` to
 /// `(1, 1, 1)`. Reading or modifying its individual properties is cheap but applying the
 /// transformation is costly.
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Debug, Copy)]
 pub struct Perspective3<N> {
     aspect: N,
     fovy:   N,
@@ -23,7 +23,7 @@ pub struct Perspective3<N> {
 /// This maps a frustrum to the unit cube with corners varying from `(-1, -1, -1)` to
 /// `(1, 1, 1)`. Reading or modifying its individual properties is costly but applying the
 /// transformation is cheap.
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Debug, Copy)]
 pub struct PerspectiveMatrix3<N> {
     matrix: Matrix4<N>
 }

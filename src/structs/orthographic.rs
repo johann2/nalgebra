@@ -10,7 +10,7 @@ use quickcheck::{Arbitrary, Gen};
 /// This flips the `z` axis and maps a axis-aligned cube to the unit cube with corners varying from
 /// `(-1, -1, -1)` to `(1, 1, 1)`. Reading or modifying its individual properties is cheap but
 /// applying the transformation is costly.
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Debug, Copy)]
 pub struct Orthographic3<N> {
     left:   N,
     right:  N,
@@ -25,7 +25,7 @@ pub struct Orthographic3<N> {
 /// This flips the `z` axis and maps a axis-aligned cube to the unit cube with corners varying from
 /// `(-1, -1, -1)` to `(1, 1, 1)`. Reading or modifying its individual properties is costly but
 /// applying the transformation is cheap.
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Debug, Copy)]
 pub struct OrthographicMatrix3<N> {
     matrix: Matrix4<N>
 }

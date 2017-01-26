@@ -78,7 +78,6 @@ an optimized set of tools for computer graphics and physics. Those features incl
 
 #![feature(proc_macro)]
 
-extern crate rustc_serialize;
 #[macro_use] extern crate serde_derive;
 extern crate rand;
 extern crate num;

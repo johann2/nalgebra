@@ -20,7 +20,7 @@ use_special_orthogonal_group_modules!();
 
 /// Two dimensional rotation matrix.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Debug, Hash, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Debug, Hash, Copy)]
 pub struct Rotation2<N> {
     submatrix: Matrix2<N>
 }
@@ -114,7 +114,7 @@ impl<N: BaseFloat> AbsoluteRotate<Vector2<N>> for Rotation2<N> {
  */
 /// Three dimensional rotation matrix.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Debug, Hash, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Debug, Hash, Copy)]
 pub struct Rotation3<N> {
     submatrix: Matrix3<N>
 }

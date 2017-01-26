@@ -28,7 +28,7 @@ use_matrix_group_modules!();
 
 /// Special identity matrix. All its operation are no-ops.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Debug, Copy)]
 pub struct Identity;
 
 impl Identity {
@@ -47,7 +47,7 @@ impl fmt::Display for Identity {
 
 /// Square matrix of dimension 1.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Hash, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Hash, Debug, Copy)]
 pub struct Matrix1<N> {
     pub m11: N
 }
@@ -72,7 +72,7 @@ mat_display_impl!(Matrix1, 1);
 
 /// Square matrix of dimension 2.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Hash, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Hash, Debug, Copy)]
 pub struct Matrix2<N> {
     pub m11: N, pub m21: N,
     pub m12: N, pub m22: N
@@ -98,7 +98,7 @@ mat_display_impl!(Matrix2, 2);
 
 /// Square matrix of dimension 3.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Hash, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Hash, Debug, Copy)]
 pub struct Matrix3<N> {
     pub m11: N, pub m21: N, pub m31: N,
     pub m12: N, pub m22: N, pub m32: N,
@@ -135,7 +135,7 @@ mat_display_impl!(Matrix3, 3);
 
 /// Square matrix of dimension 4.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Hash, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Hash, Debug, Copy)]
 pub struct Matrix4<N> {
     pub m11: N, pub m21: N, pub m31: N, pub m41: N,
     pub m12: N, pub m22: N, pub m32: N, pub m42: N,
@@ -181,7 +181,7 @@ mat_display_impl!(Matrix4, 4);
 
 /// Square matrix of dimension 5.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Hash, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Hash, Debug, Copy)]
 pub struct Matrix5<N> {
     pub m11: N, pub m21: N, pub m31: N, pub m41: N, pub m51: N,
     pub m12: N, pub m22: N, pub m32: N, pub m42: N, pub m52: N,
@@ -234,7 +234,7 @@ mat_display_impl!(Matrix5, 5);
 
 /// Square matrix of dimension 6.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Hash, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Hash, Debug, Copy)]
 pub struct Matrix6<N> {
     pub m11: N, pub m21: N, pub m31: N, pub m41: N, pub m51: N, pub m61: N,
     pub m12: N, pub m22: N, pub m32: N, pub m42: N, pub m52: N, pub m62: N,

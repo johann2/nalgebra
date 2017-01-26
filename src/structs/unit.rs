@@ -5,7 +5,7 @@ use traits::geometry::Norm;
 ///
 /// Use `.as_ref()` or `.unwrap()` to obtain the undelying value by-reference or by-move.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Hash, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Hash, Debug, Copy)]
 pub struct Unit<T> {
     v: T
 }

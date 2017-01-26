@@ -25,7 +25,7 @@ use quickcheck::{Arbitrary, Gen};
 /// Similarity transformations conserve angles. Distances are multiplied by some constant (the
 /// scale factor). The scale factor cannot be zero.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Debug, Copy)]
 pub struct Similarity2<N> {
     /// The uniform scale applicable by this similarity transformation.
     scale: N,
@@ -41,7 +41,7 @@ pub struct Similarity2<N> {
 /// Similarity transformations conserve angles. Distances are multiplied by some constant (the
 /// scale factor). The scale factor cannot be zero.
 #[repr(C)]
-#[derive(Eq, PartialEq, RustcEncodable, RustcDecodable, Clone, Debug, Copy)]
+#[derive(Eq, PartialEq, Serialize, Deserialize, Clone, Debug, Copy)]
 pub struct Similarity3<N> {
     /// The uniform scale applicable by this similarity transformation.
     scale: N,

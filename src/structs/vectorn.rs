@@ -13,7 +13,7 @@ use quickcheck::{Arbitrary, Gen};
 
 /// A stack-allocated vector of arbitrary dimension.
 #[repr(C)]
-#[derive(Eq, PartialEq, Debug)] //  FIXME: Hash, RustcEncodable, RustcDecodable
+#[derive(Eq, PartialEq, Debug)] //  FIXME: Hash, Serialize, Deserialize
 pub struct VectorN<N, D: ArrayLength<N>> {
     /// The underlying data of the vector.
     pub at: GenericArray<N, D>
