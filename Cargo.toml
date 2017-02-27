@@ -22,8 +22,8 @@ generic_sizes = [ "generic-array", "typenum" ]
 abstract_algebra = [ "algebra" ]
 
 [dependencies]
-serde = "0.8"
-serde_derive = "0.8"
+serde = "0.9"
+serde_derive = "0.9"
 rand = "0.3.*"
 num  = "0.1.*"
 
